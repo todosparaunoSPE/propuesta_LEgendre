@@ -9,6 +9,23 @@ import streamlit as st
 import pandas as pd
 from sympy import primerange
 
+
+# Estilo de fondo
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"]{
+background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 # Función para calcular los intervalos de Bertrand con la forma [m, 2m)
 def calcular_intervalos_bertrand(n):
     intervalos = []
